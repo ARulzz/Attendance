@@ -1,6 +1,7 @@
 package com.example.aaryarshankar.attendance;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class Login extends AppCompatActivity {
         password=(EditText)findViewById(R.id.pswrd);
         submit=(Button)findViewById(R.id.submit);
         show=(CheckBox)findViewById(R.id.show);
+        String sb;
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
