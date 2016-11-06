@@ -4,11 +4,18 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
 
@@ -27,15 +34,40 @@ public class Login extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username=user.getText().toString();
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl("http://104.245.33.9:1983/")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                RestApiInterface service = retrofit.create(RestApiInterface.class);
+                final LoginReq loginReq=new LoginReq();
+                String phone=user.getText().toString();
                 String pswrd=password.getText().toString();
-                if(username.equals("admin") && pswrd.equals("admin")) {
-                    Intent i=new Intent(Login.this,ChooseYear.class);
-                    startActivity(i);
-                }
-                else {
-                    //add code for invalid login id and password here
-                }
+                loginReq.phone=Long.parseLong(phone);
+                loginReq.password=pswrd;
+                int status=0;
+                Call<LoginResponse> loginResponseCall=service.getLogin(loginReq);
+                loginResponseCall.enqueue(new Callback<LoginResponse>() {
+                    @Override
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                        int status=response.code();
+                        LoginResponse   loginResponse=response.body();
+                        Log.d("Response","resp "+status);
+                        Log.d("Data",String.valueOf(loginResponse.isSuccess()));
+                        if(status==200 && loginResponse.isSuccess()) {
+                            Intent i=new Intent(Login.this,ChooseYear.class);
+                            i.putExtra("name",loginResponse.getData().getName());
+                            startActivity(i);
+                        }
+                        else {
+                            //add code for invalid login id and password here
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        Log.d("Response",t.getMessage());
+                    }
+                });
+
             }
         });
         //add code for show password here
