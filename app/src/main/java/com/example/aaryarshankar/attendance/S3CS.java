@@ -11,6 +11,5 @@ public class S3CS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s3_cs);
 
-
     }
 }
