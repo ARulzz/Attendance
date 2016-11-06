@@ -24,7 +24,6 @@ public class Login extends AppCompatActivity {
         password=(EditText)findViewById(R.id.pswrd);
         submit=(Button)findViewById(R.id.submit);
         show=(CheckBox)findViewById(R.id.show);
-        String sb;
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
