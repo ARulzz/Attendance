@@ -7,7 +7,9 @@ import android.app.Application;
  */
 
 public class Global extends Application{
-    public static String subject="Select";
-
+    public static int year=0;
+    public static String branch=null;
+    public static String subject=null;
+    public static int absentees[]=new int[70];
 
 }

@@ -36,7 +36,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "dcs"
-                Global.subject="DCS";
+                Global.subject="dcs";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -46,7 +46,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "dsa"
-                Global.subject="DSA";
+                Global.subject="dsa";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -56,7 +56,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "edc"
-                Global.subject="EDC";
+                Global.subject="edc";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -66,7 +66,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "ls" for life skills
-                Global.subject="Life_Skills";
+                Global.subject="ls";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -76,7 +76,11 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "maths"
+<<<<<<< HEAD
+                Global.subject="maths";
+=======
                 Global.subject="Maths";
+>>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -86,7 +90,11 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "stld"
+<<<<<<< HEAD
+                Global.subject="stld";
+=======
                 Global.subject="STLD";
+>>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -96,7 +104,11 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "dslab"
+<<<<<<< HEAD
+                Global.subject="dslab";
+=======
                 Global.subject="Dslab";
+>>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -106,7 +118,11 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "eclab"
+<<<<<<< HEAD
+                Global.subject="eclab";
+=======
                 Global.subject="Eclab";
+>>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -115,7 +131,8 @@ public class ChooseSubject extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //set sub variable to ""
+                //set branch variable to ""
+                Global.branch=null;
                 Intent i=new Intent(ChooseSubject.this,ChooseBranch.class);
                 startActivity(i);
             }
