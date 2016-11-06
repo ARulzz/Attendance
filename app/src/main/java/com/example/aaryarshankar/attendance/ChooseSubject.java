@@ -76,11 +76,8 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "maths"
-<<<<<<< HEAD
                 Global.subject="maths";
-=======
                 Global.subject="Maths";
->>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -90,11 +87,8 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "stld"
-<<<<<<< HEAD
                 Global.subject="stld";
-=======
                 Global.subject="STLD";
->>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -104,11 +98,8 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "dslab"
-<<<<<<< HEAD
                 Global.subject="dslab";
-=======
                 Global.subject="Dslab";
->>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -118,11 +109,8 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "eclab"
-<<<<<<< HEAD
                 Global.subject="eclab";
-=======
                 Global.subject="Eclab";
->>>>>>> 36585d06b080f8559f500a97269ee654af704bca
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -132,6 +120,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set branch variable to ""
+                //NEWSSS
                 Global.branch=null;
                 Intent i=new Intent(ChooseSubject.this,ChooseBranch.class);
                 startActivity(i);
