@@ -76,6 +76,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "maths"
+                Global.subject="Maths";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -85,6 +86,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "stld"
+                Global.subject="STLD";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -94,6 +96,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "dslab"
+                Global.subject="Dslab";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
@@ -103,6 +106,7 @@ public class ChooseSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //set sub variable to "eclab"
+                Global.subject="Eclab";
                 Intent i=new Intent(ChooseSubject.this,S3CS.class);
                 startActivity(i);
             }
