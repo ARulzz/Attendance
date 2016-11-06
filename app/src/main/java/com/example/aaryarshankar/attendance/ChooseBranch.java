@@ -23,6 +23,7 @@ public class ChooseBranch extends AppCompatActivity {
         cs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Global.branch="cs";
                 Intent i=new Intent(ChooseBranch.this,ChooseSubject.class);
                 startActivity(i);
             }
@@ -30,6 +31,7 @@ public class ChooseBranch extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Global.year=0;
                 Intent i=new Intent(ChooseBranch.this,ChooseYear.class);
                 startActivity(i);
             }

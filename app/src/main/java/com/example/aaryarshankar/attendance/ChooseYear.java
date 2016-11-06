@@ -24,6 +24,7 @@ public class ChooseYear extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // set yr variable as 2.....
+                Global.year=2;
                 Intent i=new Intent(ChooseYear.this,ChooseBranch.class);
                 startActivity(i);
             }
