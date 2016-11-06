@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
                 String username=user.getText().toString();
                 String pswrd=password.getText().toString();
                 if(username.equals("admin") && pswrd.equals("admin")) {
-                    Intent i=new Intent(Login.this,ChooseSemester.class);
+                    Intent i=new Intent(Login.this,ChooseYear.class);
                     startActivity(i);
                 }
                 else {

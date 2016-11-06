@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_choose_semester"
+    android:id="@+id/activity_choose_subject"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.aaryarshankar.attendance.ChooseSemester">
+    tools:context="com.example.aaryarshankar.attendance.ChooseSubject">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,36 +19,65 @@
         android:layout_alignParentStart="true">
 
         <TextView
-            android:text="Choose the year"
+            android:text="Choose your subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/yrChoose"
+            android:id="@+id/subChoose"
             android:textSize="20sp"
             android:textColor="#000000" />
 
         <Button
-            android:text="1st Year"
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/first" />
+            android:id="@+id/b1" />
 
         <Button
-            android:text="2nd year"
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/second" />
+            android:id="@+id/b2" />
 
         <Button
-            android:text="3rd year"
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/third" />
+            android:id="@+id/b3" />
 
         <Button
-            android:text="4th year"
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fourth" />
+            android:id="@+id/b4" />
 
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b5" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b6" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b7" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b8" />
+
+        <Button
+            android:text="Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/back" />
     </LinearLayout>
 </RelativeLayout>
