@@ -44,125 +44,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:text="Roll No 1"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/r1"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
+                    android:id="@+id/rollList">
 
-                <RadioButton
-                    android:text="Roll No 2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r2"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
 
-                <RadioButton
-                    android:text="Roll No 3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r3"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r4"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r5"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r6"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r7"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r8"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r9"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r10"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r11"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r12"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r13"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r14"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
-
-                <RadioButton
-                    android:text="Roll No 15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/r15"
-                    android:textSize="20sp"
-                    android:textColor="#000000" />
+                </LinearLayout>
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -171,14 +60,13 @@
                     <Button android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Left"/>
-
+                        android:text="Check"
+                        android:id="@+id/check" />
                     <Button android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Right"/>
+                        android:text="Submit"/>
                 </LinearLayout>
-
 
             </LinearLayout>
         </ScrollView>

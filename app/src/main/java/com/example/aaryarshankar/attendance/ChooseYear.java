@@ -18,7 +18,7 @@ public class ChooseYear extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_semester);
+        setContentView(R.layout.activity_choose_year);
         Bundle bundle=getIntent().getExtras();
         String name="NULL";
         if(bundle!=null){

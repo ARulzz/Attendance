@@ -19,12 +19,20 @@
         android:layout_alignParentStart="true">
 
         <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loguser"
+            android:textSize="20sp" />
+
+        <TextView
             android:text="Choose the year"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/yrChoose"
             android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textAlignment="center"/>
 
         <Button
             android:text="1st Year"
