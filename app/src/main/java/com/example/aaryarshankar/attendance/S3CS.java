@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,6 +17,7 @@ public class S3CS extends AppCompatActivity {
 
     Button check, submit;
     boolean confirmed=false;
+    int count=0;
     CheckBox[] checkBox =new CheckBox[Global.nstuds];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +35,8 @@ public class S3CS extends AppCompatActivity {
             rollList.addView(checkBox[i]);
         }
         check.setOnClickListener(new View.OnClickListener() {
-            int j=0;
             String disp="";
+            int j=0;
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < Global.nstuds; i++)
@@ -44,6 +46,7 @@ public class S3CS extends AppCompatActivity {
                         disp=disp+", "+String.valueOf(i+1);
                     }
                 }
+                count=j;
                 AlertDialog alertDialog = new AlertDialog.Builder(
                         S3CS.this).create();
 
@@ -75,9 +78,9 @@ public class S3CS extends AppCompatActivity {
             public void onClick(View v) {
                 confirmed=true;
                 if(confirmed) {
+                    Log.d("save","saved");
                     //etho panni cheyyende part
                     Toast.makeText(getApplicationContext(), "Successfully Submitted", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });

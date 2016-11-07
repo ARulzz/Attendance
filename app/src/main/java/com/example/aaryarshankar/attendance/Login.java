@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,7 +23,6 @@ public class Login extends AppCompatActivity {
     EditText user, password;
     Button login;
     CheckBox show;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
                             startActivity(i);
                         }
                         else {
-                            //add code for invalid login id and password here
+                            Toast.makeText(getApplicationContext(), "Invalid credentials.\nPlease try again.", Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override
@@ -67,7 +67,6 @@ public class Login extends AppCompatActivity {
                         Log.d("Response",t.getMessage());
                     }
                 });
-
             }
         });
         //add code for show password here
