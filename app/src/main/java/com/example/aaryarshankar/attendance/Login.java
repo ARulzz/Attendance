@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,8 @@ public class Login extends AppCompatActivity {
                 final LoginReq loginReq=new LoginReq();
                 String phone=user.getText().toString();
                 String pswrd=password.getText().toString();
+                if (phone.equals("")) //to avoid crashing when nothing is entered, and that null is converted to long
+                    phone="1";
                 loginReq.phone=Long.parseLong(phone);
                 loginReq.password=pswrd;
                 int status=0;
@@ -70,6 +73,16 @@ public class Login extends AppCompatActivity {
             }
         });
         //add code for show password here
+        show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (show.isChecked()){
+                    password.setTransformationMethod(null);
+                }else{
+                    password.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
 
     }
 }

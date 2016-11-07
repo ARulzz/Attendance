@@ -2,6 +2,7 @@ package com.example.aaryarshankar.attendance;
 
 import android.content.Intent;
 
+import android.graphics.Color;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,8 @@ public class ChooseYear extends AppCompatActivity {
         name=bundle.getString("name");
         Log.d("user",name);}
         TextView logname=(TextView)findViewById(R.id.loguser);
-        logname.setText(name);
+        logname.setText("Welcome "+name);
+        logname.setTextColor(Color.parseColor("#000000"));
         y1=(Button)findViewById(R.id.first);
         y2=(Button)findViewById(R.id.second);
         y3=(Button)findViewById(R.id.third);

@@ -23,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/loguser"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textAlignment="center" />
 
         <TextView
             android:text="Choose the year"
@@ -32,7 +33,7 @@
             android:id="@+id/yrChoose"
             android:textSize="20sp"
             android:textColor="#000000"
-            android:textAlignment="center"/>
+            android:textAlignment="textStart"/>
 
         <Button
             android:text="1st Year"
