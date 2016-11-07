@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity {
                 final LoginReq loginReq=new LoginReq();
                 String phone=user.getText().toString();
                 String pswrd=password.getText().toString();
+
                 loginReq.phone=Long.parseLong(phone);
                 loginReq.password=pswrd;
                 int status=0;
