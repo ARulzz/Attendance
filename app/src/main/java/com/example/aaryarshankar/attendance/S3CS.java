@@ -78,7 +78,6 @@ public class S3CS extends AppCompatActivity {
             public void onClick(View v) {
                 confirmed=true;
                 if(confirmed) {
-                    Log.d("save","saved");
                     //etho panni cheyyende part
                     Toast.makeText(getApplicationContext(), "Successfully Submitted", Toast.LENGTH_SHORT).show();
                 }
