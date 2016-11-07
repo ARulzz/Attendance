@@ -81,7 +81,7 @@
         android:layout_below="@+id/show"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:id="@+id/submit"
+        android:id="@+id/login"
         android:elevation="0dp"
         android:textSize="25sp" />
 

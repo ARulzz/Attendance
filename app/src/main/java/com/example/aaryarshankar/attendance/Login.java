@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Login extends AppCompatActivity {
 
     EditText user, password;
-    Button submit;
+    Button login;
     CheckBox show;
 
     @Override
@@ -29,9 +29,9 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         user=(EditText)findViewById(R.id.username);
         password=(EditText)findViewById(R.id.pswrd);
-        submit=(Button)findViewById(R.id.submit);
+        login=(Button)findViewById(R.id.login);
         show=(CheckBox)findViewById(R.id.show);
-        submit.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Retrofit retrofit = new Retrofit.Builder()

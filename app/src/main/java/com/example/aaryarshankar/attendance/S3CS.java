@@ -15,6 +15,8 @@ import android.widget.Toast;
 public class S3CS extends AppCompatActivity {
 
     Button check, submit;
+    boolean confirmed=false;
+    CheckBox[] checkBox =new CheckBox[Global.nstuds];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,19 +24,26 @@ public class S3CS extends AppCompatActivity {
         check=(Button)findViewById(R.id.check);
         submit=(Button)findViewById(R.id.submit);
         LinearLayout rollList = (LinearLayout)findViewById(R.id.rollList);
-        for (int i = 0; i < 70; i++)
+        for (int i = 0; i < Global.nstuds; i++)
         {
-            CheckBox checkBox = new CheckBox(this);
-            checkBox.setId(i);
-            checkBox.setText("Roll No. "+(i+1));
-            checkBox.setTextSize(20);
-            rollList.addView(checkBox);
+            checkBox[i] = new CheckBox(this);
+            checkBox[i].setId(i);
+            checkBox[i].setText("Roll No. "+(i+1));
+            checkBox[i].setTextSize(20);
+            rollList.addView(checkBox[i]);
         }
-
         check.setOnClickListener(new View.OnClickListener() {
             int j=0;
+            String disp="";
             @Override
             public void onClick(View v) {
+                for (int i = 0; i < Global.nstuds; i++)
+                {
+                    if(checkBox[i].isChecked()) {
+                        Global.absentees[j++]=i+1;
+                        disp=disp+", "+String.valueOf(i+1);
+                    }
+                }
                 AlertDialog alertDialog = new AlertDialog.Builder(
                         S3CS.this).create();
 
@@ -42,7 +51,8 @@ public class S3CS extends AppCompatActivity {
                 alertDialog.setTitle("Absentees:");
 
                 // Setting Dialog Message
-                alertDialog.setMessage("Welcome to AndroidHive.info");
+                alertDialog.setMessage(disp.substring(disp.indexOf(" ")+1));
+                disp="";
 
                 // Setting Icon to Dialog
                 //alertDialog.setIcon(R.drawable.tick);
@@ -52,11 +62,23 @@ public class S3CS extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // Write your code here to execute after dialog closed
                         Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_SHORT).show();
+                        confirmed=true;
                     }
                 });
 
                 // Showing Alert Message
                 alertDialog.show();
+            }
+        });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirmed=true;
+                if(confirmed) {
+                    //etho panni cheyyende part
+                    Toast.makeText(getApplicationContext(), "Successfully Submitted", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
 
