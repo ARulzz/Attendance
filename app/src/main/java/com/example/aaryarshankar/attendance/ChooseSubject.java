@@ -26,11 +26,11 @@ public class ChooseSubject extends AppCompatActivity {
         b1.setText("DCS");
         b2.setText("DSA");
         b3.setText("EDC");
-        b4.setText("Life_Skills");
+        b4.setText("Life Skills");
         b5.setText("Maths");
         b6.setText("STLD");
-        b7.setText("Data_Structures_Lab");
-        b8.setText("Electronics_Lab");
+        b7.setText("Data Structures Lab");
+        b8.setText("Electronics Lab");
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

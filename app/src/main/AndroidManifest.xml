@@ -34,7 +34,7 @@
         <activity android:name=".ChooseYear" />
         <activity android:name=".ChooseSubject" />
         <activity android:name=".S3CS" />
-        <activity android:name=".S3CsTest"></activity>
+        <activity android:name=".Overview"></activity>
     </application>
 
 </manifest>

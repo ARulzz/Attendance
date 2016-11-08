@@ -43,12 +43,8 @@ public class Login extends AppCompatActivity {
                 final LoginReq loginReq=new LoginReq();
                 String phone=user.getText().toString();
                 String pswrd=password.getText().toString();
-<<<<<<< HEAD
                 if (phone.equals("")) //to avoid crashing when nothing is entered, and that null is converted to long
                     phone="1";
-=======
-
->>>>>>> eb35f921225aab87076f7f5002204dc3a249a05b
                 loginReq.phone=Long.parseLong(phone);
                 loginReq.password=pswrd;
                 int status=0;

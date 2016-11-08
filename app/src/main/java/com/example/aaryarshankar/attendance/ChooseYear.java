@@ -27,6 +27,7 @@ public class ChooseYear extends AppCompatActivity {
         Log.d("user",name);}
         TextView logname=(TextView)findViewById(R.id.loguser);
         logname.setText("Welcome "+name);
+        Global.userNaMe=name;
         logname.setTextColor(Color.parseColor("#000000"));
         y1=(Button)findViewById(R.id.first);
         y2=(Button)findViewById(R.id.second);
